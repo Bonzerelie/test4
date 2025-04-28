@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Relative Pitch Game! 🎹🎶</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Relative Pitch Game! 🎹🎶</h1>
+
+        <div id="controls">
+            <button id="startButton">Start</button>
+            <button id="nextButton" disabled>Next</button>
+            <button id="referenceButton">Play Reference Note - C4</button>
+        </div>
+
+        <div id="noteButtons">
+            <button class="noteButton" id="C">C</button>
+            <button class="noteButton" id="Cs">C#/Db</button>
+            <button class="noteButton" id="D">D</button>
+            <button class="noteButton" id="Ds">D#/Eb</button>
+            <button class="noteButton" id="E">E</button>
+            <button class="noteButton" id="F">F</button>
+            <button class="noteButton" id="Fs">F#/Gb</button>
+            <button class="noteButton" id="G">G</button>
+            <button class="noteButton" id="Gs">G#/Ab</button>
+            <button class="noteButton" id="A">A</button>
+            <button class="noteButton" id="As">A#/Bb</button>
+            <button class="noteButton" id="B">B</button>
+        </div>
+
+        <div class="feedback" id="feedback"></div>
+
+        <div class="stats">
+            <span>Correct Answers: <span id="correctCount">0</span></span>
+            <span>Incorrect Answers: <span id="incorrectCount">0</span></span>
+            <span>Total Questions: <span id="totalCount">0</span></span>
+            <span>Accuracy: <span id="accuracy">0%</span></span>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
