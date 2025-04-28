@@ -1,0 +1,109 @@
+body {
+  font-family: 'Arial', sans-serif;
+  text-align: center;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 400px; /* Narrower for phone screens */
+  margin: 20px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  margin-bottom: 20px;
+}
+
+button {
+  margin: 5px;
+  padding: 12px 18px;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  background-color: #3498db;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover:not(:disabled) {
+  background-color: #2980b9;
+}
+
+button:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+}
+
+#noteButtons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+#noteButtons button {
+  margin: 5px;
+  padding: 12px 18px;
+  font-size: 14px;
+  width: 90%; /* Reduce width of note buttons */
+  max-width: 80px; /* Limit the max width of the note buttons */
+  transition: background-color 0.3s;
+}
+
+#noteButtons button.correct {
+  background-color: green;
+}
+
+#noteButtons button.incorrect {
+  background-color: red;
+}
+
+.feedback {
+  margin-top: 20px;
+  font-size: 20px;
+  font-weight: bold;
+  min-height: 24px;
+  transition: opacity 0.3s ease;
+  opacity: 1;
+}
+
+.feedback.correct {
+  color: green;
+}
+
+.feedback.incorrect {
+  color: red;
+}
+
+.stats {
+  margin-top: 20px;
+}
+
+.stats span {
+  display: block;
+  margin-top: 5px;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 480px) {
+  .container {
+    width: 90%;
+    padding: 15px;
+  }
+
+  button {
+    width: 100%;
+    margin: 5px 0;
+  }
+
+  #noteButtons button {
+    width: 45%; /* Increase the button width on smaller screens */
+    max-width: 100%; /* Prevent overlap on small screens */
+  }
+}
